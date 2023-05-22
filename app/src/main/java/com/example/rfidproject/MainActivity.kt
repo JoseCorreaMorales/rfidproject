@@ -17,9 +17,9 @@ import com.android.volley.toolbox.StringRequest
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var btnLogin:Button;
-    private lateinit var username:EditText;
-    private lateinit var password:EditText;
+    private lateinit var btnLogin:Button
+    private lateinit var username:EditText
+    private lateinit var password:EditText
 
     var sesion: SharedPreferences? = null
 
