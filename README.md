@@ -4,9 +4,8 @@ Este proyecto tiene como objetivo implementar un sistema de identificación por 
 
 ## Componentes
 
-* Lector RFID serie: modelo AH-064
+* Lector RFID serie: ???
 * Tarjeta de desarrollo: ESP32
-* Antena RFID de frecuencia de 13.56 MHz
 * Conexión a Internet
 
 ## Instalación y configuración
