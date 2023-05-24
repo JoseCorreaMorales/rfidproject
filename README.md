@@ -46,7 +46,8 @@ dependencies {
     implementation 'com.android.volley:volley:1.2.1'
 }
 ```
-
+### Singlenton 
+[Texto del enlace]([URL](https://guides.codepath.com/android/networking-with-the-volley-library))
 
 ## Contribuir
 
