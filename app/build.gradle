@@ -9,7 +9,7 @@ android {
     defaultConfig {
         applicationId "com.example.rfidproject"
         minSdk 21
-        targetSdk 32
+        targetSdk 33
         versionCode 1
         versionName "1.0"
 
@@ -46,4 +46,10 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
     implementation 'com.android.volley:volley:1.2.1'
+
+    // Dependencia de Mockito
+    testImplementation 'org.mockito:mockito-core:3.12.4'
+
+    // Dependencia para las pruebas unitarias
+    testImplementation 'junit:junit:4.13.2'
 }

@@ -14,12 +14,13 @@ import org.json.JSONObject
 import com.android.volley.Request
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.StringRequest
+import com.google.android.material.textfield.TextInputLayout
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var btnLogin:Button
-    private lateinit var username:EditText
-    private lateinit var password:EditText
+     lateinit var btnLogin:Button
+     lateinit var username:EditText
+     lateinit var password:TextInputLayout
 
     var sesion: SharedPreferences? = null
 
@@ -36,7 +37,7 @@ class MainActivity : AppCompatActivity() {
 
         btnLogin.setOnClickListener {
             val user = username.text.toString().trim()
-            val pass = password.text.toString().trim()
+            val pass = password.editText?.text.toString()
 
             if (user.isEmpty()){
                 username.error = "Ingresa el usuario"
@@ -48,14 +49,15 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun login() {
-        val url = Uri.parse(Config.URL+"login")
+     fun login() {
+        val url = Uri.parse(Config.URL+"login.php/")
             .buildUpon()
             .build().toString()
 
         val dato: JSONObject = JSONObject()
         dato.put("username", username?.text.toString())
-        dato.put("password", password?.text.toString())
+        //dato.put("password", password?.text.toString())
+         dato.put("password", password.editText?.text.toString())
 
         val peticion = JsonObjectRequest(
             Request.Method.POST, url, dato,
@@ -64,8 +66,9 @@ class MainActivity : AppCompatActivity() {
             },
             {
                 Toast.makeText(this, "Error en la peticion", Toast.LENGTH_SHORT).show()
+                println(dato)
             })
-
+            print(peticion)
         MySingleton.getInstance(applicationContext).addToRequestQueue(peticion)
     }
 
