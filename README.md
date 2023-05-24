@@ -18,6 +18,20 @@ Este proyecto tiene como objetivo implementar un sistema de identificación por 
 5. En caso de almacenar los logs en la tarjeta de desarrollo, usar la plataforma Arduino IDE para cargar el archivo esp32_code.ino en la ESP32
 6. Ejecutar el archivo read_rfid.py en una terminal y verificar que el lector de RFID está leyendo las etiquetas correctamente
 
+
+```grade
+ defaultConfig {
+        applicationId "com.example.rfidproject"
+        minSdk 21
+        targetSdk 33 //bf 32
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+```
+
+
 ## Contribuir
 
 Para contribuir a este proyecto, por favor seguir los siguientes pasos:
