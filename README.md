@@ -47,7 +47,7 @@ dependencies {
 }
 ```
 ### Volley usando el patron Singlenton 
-[Link]([URL](https://guides.codepath.com/android/networking-with-the-volley-library))
+https://guides.codepath.com/android/networking-with-the-volley-library
 
 ## Contribuir
 
