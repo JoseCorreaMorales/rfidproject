@@ -50,14 +50,14 @@ class MainActivity : AppCompatActivity() {
     }
 
      fun login() {
-        val url = Uri.parse(Config.URL+"login.php/")
+        val url = Uri.parse(Config.URL+"login.php")
             .buildUpon()
             .build().toString()
 
         val dato: JSONObject = JSONObject()
-        dato.put("username", username?.text.toString())
+        dato.put("user", username?.text.toString())
         //dato.put("password", password?.text.toString())
-         dato.put("password", password.editText?.text.toString())
+         dato.put("pass", password.editText?.text.toString())
 
         val peticion = JsonObjectRequest(
             Request.Method.POST, url, dato,
@@ -66,7 +66,9 @@ class MainActivity : AppCompatActivity() {
             },
             {
                 Toast.makeText(this, "Error en la peticion", Toast.LENGTH_SHORT).show()
-                println(dato)
+                println(it)
+
+
             })
             print(peticion)
         MySingleton.getInstance(applicationContext).addToRequestQueue(peticion)
